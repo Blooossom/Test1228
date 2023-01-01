@@ -19,9 +19,9 @@ import javax.persistence.Table;
 public class Admin {
 
     @Id
-    @Column(name = "id", nullable = false, length = 12)
+    @Column(name = "id", nullable = true, length = 12)
     private String id;
 
-    @Column(name = "password", nullable = false, length = 12)
+    @Column(name = "password", nullable = true, length = 12)
     private String password;
 }

@@ -20,7 +20,7 @@ public class AdminController {
 
     @PostMapping("/login")
     public AdminRes adminLogin(AdminReq req, HttpSession session) {
-
+        return service.adminLogin(req);
     }
 
 
