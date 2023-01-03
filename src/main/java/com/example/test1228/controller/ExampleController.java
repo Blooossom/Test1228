@@ -1,8 +1,7 @@
 package com.example.test1228.controller;
 
-import com.example.test1228.dto.ExampleReqDTO;
-import com.example.test1228.dto.ExampleResDTO;
-import com.example.test1228.entity.Example;
+import com.example.test1228.dto.req.ExampleReqDTO;
+import com.example.test1228.dto.res.ExampleResDTO;
 import com.example.test1228.service.ExampleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

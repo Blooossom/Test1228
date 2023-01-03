@@ -1,4 +1,4 @@
-package com.example.test1228.dto;
+package com.example.test1228.dto.req;
 
 
 import com.example.test1228.entity.Admin;
@@ -11,14 +11,14 @@ import lombok.*;
 @ToString
 public class AdminReq {
 
-    private String adminId;
+    private String id;
 
-    private String adminPassword;
+    private String password;
 
     public Admin toAdmin() {
         return Admin.builder()
-                .id(this.adminId)
-                .password(this.adminPassword)
+                .id(this.id)
+                .password(this.password)
                 .build();
     }
 }

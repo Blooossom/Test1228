@@ -1,4 +1,4 @@
-package com.example.test1228.dto;
+package com.example.test1228.dto.res;
 
 
 import lombok.AllArgsConstructor;
@@ -12,8 +12,8 @@ import lombok.Setter;
 @Setter
 public class AdminRes {
 
-    private String adminId;
-    private String adminPassword;
+    private String id;
+    private String password;
 
 
 

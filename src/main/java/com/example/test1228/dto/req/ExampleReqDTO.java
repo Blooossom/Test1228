@@ -1,4 +1,4 @@
-package com.example.test1228.dto;
+package com.example.test1228.dto.req;
 
 
 import com.example.test1228.entity.Example;

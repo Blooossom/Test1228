@@ -1,26 +1,26 @@
 package com.example.test1228.controller;
 
 
-import com.example.test1228.dto.AdminReq;
-import com.example.test1228.dto.AdminRes;
-import com.example.test1228.service.AdminService;
+import com.example.test1228.dto.req.AdminReq;
+import com.example.test1228.dto.res.AdminRes;
+import com.example.test1228.service.impl.AdminServiceImpl;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
 
 @RestController
+@RequiredArgsConstructor
 public class AdminController {
 
-    @Autowired
-    AdminService service;
+    private final AdminServiceImpl service;
 
 
     @PostMapping("/login")
-    public AdminRes adminLogin(AdminReq req, HttpSession session) {
-        return service.adminLogin(req);
+    public String adminLogin(AdminReq req, HttpSession session) {
+        return service.login(req);
     }
 
 

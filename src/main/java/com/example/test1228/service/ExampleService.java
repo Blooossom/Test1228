@@ -1,8 +1,8 @@
 package com.example.test1228.service;
 
 
-import com.example.test1228.dto.ExampleReqDTO;
-import com.example.test1228.dto.ExampleResDTO;
+import com.example.test1228.dto.req.ExampleReqDTO;
+import com.example.test1228.dto.res.ExampleResDTO;
 import com.example.test1228.entity.Example;
 import com.example.test1228.repository.ExampleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
