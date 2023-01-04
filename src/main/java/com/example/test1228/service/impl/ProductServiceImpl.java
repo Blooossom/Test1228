@@ -27,7 +27,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public String addProduct(ProductReq req) {
         try {
-            repo.save(req.builder)
+            repo.save(req.toProduct());
         } catch (Exception err) {
             err.printStackTrace();
             return "failed";
@@ -37,16 +37,28 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public String deleteProducts(ProductReq req) {
-        return null;
+        try {
+            repo.delete(req.toProduct());
+        } catch (Exception err) {
+            err.printStackTrace();
+            return "failed";
+        }
+        return "success";
     }
 
     @Override
     public ProductRes selectProduct(String id) {
-        return null;
+        return repo.findByProductname(id);
     }
 
     @Override
     public String updateProduct(ProductReq req) {
-        return null;
+        try {
+            repo.save(req.toProduct());
+        } catch (Exception err) {
+            err.printStackTrace();
+            return "failed";
+        }
+        return "success";
     }
 }

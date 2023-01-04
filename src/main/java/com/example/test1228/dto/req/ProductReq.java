@@ -34,7 +34,16 @@ public class ProductReq {
     public Product toProduct() {
         return Product.builder()
                 .id(id)
-                .productname()
-                .
+                .productname(productName)
+                .thumb(thumb)
+                .status(status)
+                .price(price)
+                .amount(amount)
+                .summary(summary)
+                .content(content)
+                .indate(indate)
+                .markettype(marketType)
+                .ordernum(orderNum)
+                .build();
     }
 }
